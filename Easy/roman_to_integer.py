@@ -9,13 +9,11 @@ class Solution:
             'D': 500,
             'M': 1000
         }
-        
-        ans = 0
-        
+
+        re = 0
         for i in range(len(s)):
-            if i < len(s) - 1 and D[s[i]] < D[s[i+1]]:
-                ans -= D[s[i]]
+            if i < len(s) - 1 and D[s[i]] < D[s[i + 1]]:
+                re -= D[s[i]]
             else:
-                ans += D[s[i]]
-        
-        return ans
+                re += D[s[i]]
+        return re
